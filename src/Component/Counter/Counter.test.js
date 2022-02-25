@@ -3,8 +3,8 @@ import userEvent from '@testing-library/user-event'
 import Counter from ".";
 
 
-describe('descrição do component', () => {
-  test('deve iniciar o titulo com o valor 0', () => {
+describe('component Description', () => {
+  test('must start with the value 0', () => {
     render(< Counter />);
 
     const CounterTitlle = screen.getByText('0');
@@ -12,7 +12,7 @@ describe('descrição do component', () => {
     expect(CounterTitlle).toBeInTheDocument();
   })
 
-  test('deve conter a classe Counter_title no titulo', () => {
+  test('must have class counter_title', () => {
     render(< Counter />);
 
     const CounterTitlle = screen.getByText('0');
@@ -20,7 +20,7 @@ describe('descrição do component', () => {
     expect(CounterTitlle).toHaveClass('counter__title');
   })
 
-  test('nao deve ter a classe com decremento ou incremento', () => {
+  test('must not have class with decrement', () => {
     render(< Counter />);
 
     const CounterTitlle = screen.getByText('0');
@@ -29,7 +29,7 @@ describe('descrição do component', () => {
     expect(CounterTitlle).not.toHaveClass('counter__titleDecrement');
   })
 
-  test('deve ter um botao incrementar', () => {
+  test('must have an increment button', () => {
     render(< Counter />);
 
     const ButtonIncrement = screen.getByRole('button', {
@@ -40,7 +40,7 @@ describe('descrição do component', () => {
     
   })
 
-  test('deve ter uma classe incrementar no botao', () => {
+  test(' must have an increment class on the button', () => {
     render(< Counter />);
 
     const ButtonIncrement = screen.getByRole('button', {
@@ -52,7 +52,7 @@ describe('descrição do component', () => {
     
   })
 
-  test('deve ter um botao decrementar', () => {
+  test('must have an decrement button', () => {
     render(< Counter />);
 
     const ButtonIncrement = screen.getByRole('button', {
@@ -63,7 +63,7 @@ describe('descrição do component', () => {
     
   })
 
-  test('deve ter uma classe decrementar no botao', () => {
+  test('must have an decrement class on the button', () => {
     render(< Counter />);
 
     const ButtonDecrement = screen.getByRole('button', {
@@ -75,7 +75,7 @@ describe('descrição do component', () => {
     
   })
 
-  test('deve incrementar ao clicar no botao incrementar', () => {
+  test('should increment when clicking the increment button', () => {
     render(< Counter />);
 
     const ButtonIncrement = screen.getByRole('button', {
@@ -88,7 +88,7 @@ describe('descrição do component', () => {
     
   })
 
-  test('deve decrementar ao clicar no botao decrementar', () => {
+  test('should decrement when clicking the decrement button', () => {
     render(< Counter />);
 
     const ButtonDecrement = screen.getByRole('button', {
@@ -101,7 +101,7 @@ describe('descrição do component', () => {
     
   })
 
-  test('deve adcionar a classe counter__title--increment quando o valor for maior que 0', () => {
+  test('must add counter__title--increment class when value is greater than 0', () => {
     render(< Counter />);
 
     const ButtonIncrement = screen.getByRole('button', {
@@ -114,7 +114,7 @@ describe('descrição do component', () => {
     
   })
 
-  test('deve adcionar a classe counter__title--decrement quando o valor for menor que 0', () => {
+  test('must add counter__title--decrement class when value is greater than 0', () => {
     render(< Counter />);
 
     const ButtonDecrement = screen.getByRole('button', {
