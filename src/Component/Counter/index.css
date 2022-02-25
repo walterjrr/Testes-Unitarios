@@ -11,11 +11,11 @@
     font-size: 95px;
 }
   
-.counter__title--increment {
+.counter__titleIncrement {
     color: var(--color-button-increment);
 }
 
-.counter__title--decrement {
+.counter__titleDcrement {
     color: var(--color-button-decrement);
 }
   
@@ -40,24 +40,24 @@
     background-color: var(--color-button-default-hover);
 }
   
-.button--increment {
+.buttonIncrement {
     background-color: var(--color-button-increment);
     color: var(--color-white);
     outline-color: var(--color-button-increment-outline);
     cursor: pointer;
 }
 
-.button--increment:hover {
+.buttonIncrement:hover {
     background-color: var(--color-button-increment-hover);
 }
   
-.button--decrement {
+.buttonDecrement {
     background-color: var(--color-button-decrement);
     color: var(--color-white);
     outline-color: var(--color-button-decrement-outline);
     cursor: pointer;
 }
 
-.button--decrement:hover {
+.buttonDecrement:hover {
     background-color: var(--color-button-decrement-hover);
 }

@@ -25,8 +25,8 @@ describe('descrição do component', () => {
 
     const CounterTitlle = screen.getByText('0');
 
-    expect(CounterTitlle).not.toHaveClass('counter__title--increment');
-    expect(CounterTitlle).not.toHaveClass('counter__title--decrement');
+    expect(CounterTitlle).not.toHaveClass('counter__titleIncrement');
+    expect(CounterTitlle).not.toHaveClass('counter__titleDecrement');
   })
 
   test('deve ter um botao incrementar', () => {
@@ -48,7 +48,7 @@ describe('descrição do component', () => {
     });
 
     expect(ButtonIncrement).toHaveClass('button');
-    expect(ButtonIncrement).toHaveClass('button--increment');
+    expect(ButtonIncrement).toHaveClass('buttonIncrement');
     
   })
 
@@ -71,7 +71,7 @@ describe('descrição do component', () => {
     });
 
     expect(ButtonDecrement).toHaveClass('button');
-    expect(ButtonDecrement).toHaveClass('button--decrement');
+    expect(ButtonDecrement).toHaveClass('buttonDecrement');
     
   })
 
@@ -108,9 +108,9 @@ describe('descrição do component', () => {
       name: /increment/i,
     });
 
-    expect(screen.queryByText('0')).not.toHaveClass('counter__title--increment')
+    expect(screen.queryByText('0')).not.toHaveClass('counter__titleIncrement')
     userEvent.click(ButtonIncrement)
-    expect(screen.getByText('1')).toHaveClass('counter__title--increment');
+    expect(screen.getByText('1')).toHaveClass('counter__titleIncrement');
     
   })
 
@@ -121,9 +121,9 @@ describe('descrição do component', () => {
       name: /Decrement/i,
     });
 
-    expect(screen.queryByText('0')).not.toHaveClass('counter__title--decrement')
+    expect(screen.queryByText('0')).not.toHaveClass('counter__titleDecrement')
     userEvent.click(ButtonDecrement)
-    expect(screen.getByText('-1')).toHaveClass('counter__title--decrement');
+    expect(screen.getByText('-1')).toHaveClass('counter__titleDecrement');
     
   })
 
